@@ -1,13 +1,35 @@
 import { useState } from 'react';
+import config from '../config';
 
-const send = async ({ setStatus }) => {
-  return new Promise(resolve => {
+const send = async ({ email, message, name, setStatus }) => {
+  try {
     setStatus('loading');
-    setTimeout(() => {
+
+    const response = await fetch(`${config.api}/contact`, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrer: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify({
+        email,
+        message,
+        name,
+      }),
+    });
+
+    if (response.ok) {
       setStatus('sent');
-      resolve();
-    }, 2000);
-  });
+    } else {
+      setStatus('failed');
+    }
+  } catch (e) {
+    console.error(e);
+    setStatus('failed');
+  }
 };
 
 export default () => {

@@ -67,6 +67,7 @@ const Index = () => {
             name="contact_submit"
             value={
               {
+                failed: '🚫',
                 loading: '⏱',
                 normal: 'Submit',
                 sent: 'Sent!',
