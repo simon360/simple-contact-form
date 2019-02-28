@@ -1,0 +1,19 @@
+{
+  "name": "simple-contact-form",
+  "version": "0.0.1",
+  "description": "A simple contact form, built in React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon360/simple-contact-form.git"
+  },
+  "author": "Simon Andrews <hello@sadl.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simon360/simple-contact-form/issues"
+  },
+  "homepage": "https://github.com/simon360/simple-contact-form#readme"
+}
