@@ -1,5 +1,18 @@
-import React from 'react';
+/** @jsx jsx */
+
 import useEmailState from '../hooks/useEmailState';
+import { css, jsx } from '@emotion/core';
+
+const wrapperStyle = css`
+  * {
+    box-sizing: border-box;
+  }
+
+  margin: 0 auto;
+  max-width: ${800 / 16}rem;
+  padding: 1rem;
+  position: relative;
+`;
 
 const Index = () => {
   const {
@@ -15,7 +28,7 @@ const Index = () => {
   } = useEmailState();
 
   return (
-    <React.Fragment>
+    <div css={wrapperStyle}>
       <h1>Contact SADL</h1>
       <p>Get in touch with Simon Andrews Development Limited</p>
       <form
@@ -76,7 +89,7 @@ const Index = () => {
           />
         </div>
       </form>
-    </React.Fragment>
+    </div>
   );
 };
 
