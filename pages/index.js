@@ -1,7 +1,9 @@
 /** @jsx jsx */
 
-import useEmailState from '../hooks/useEmailState';
 import { css, jsx } from '@emotion/core';
+
+import TextInput from '../components/TextInput';
+import useEmailState from '../hooks/useEmailState';
 
 const wrapperStyle = css`
   * {
@@ -44,10 +46,10 @@ const Index = () => {
         <div>
           <label>
             Your name
-            <input
+            <TextInput
               type="text"
-              name="contact_name"
               onChange={e => setName(e.target.value)}
+              required
               value={name}
             />
           </label>
@@ -55,10 +57,11 @@ const Index = () => {
         <div>
           <label>
             Your email address
-            <input
+            <TextInput
               type="email"
               name="contact_email"
               onChange={e => setEmail(e.target.value)}
+              required
               value={email}
             />
           </label>
