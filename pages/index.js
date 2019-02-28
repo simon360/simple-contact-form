@@ -2,6 +2,7 @@
 
 import { css, jsx } from '@emotion/core';
 
+import Label from '../components/Label';
 import TextArea from '../components/TextArea';
 import TextInput from '../components/TextInput';
 import useEmailState from '../hooks/useEmailState';
@@ -46,19 +47,17 @@ const Index = () => {
         }}
       >
         <div>
-          <label>
-            Your name
+          <Label text="Your name">
             <TextInput
               type="text"
               onChange={e => setName(e.target.value)}
               required
               value={name}
             />
-          </label>
+          </Label>
         </div>
         <div>
-          <label>
-            Your email address
+          <Label text="Your email address">
             <TextInput
               type="email"
               name="contact_email"
@@ -66,18 +65,17 @@ const Index = () => {
               required
               value={email}
             />
-          </label>
+          </Label>
         </div>
         <div>
-          <label>
-            Your message
+          <Label text="Your message">
             <TextArea
               name="contact_message"
               onChange={e => setMessage(e.target.value)}
               required
               value={message}
             />
-          </label>
+          </Label>
         </div>
         <div>
           <input
