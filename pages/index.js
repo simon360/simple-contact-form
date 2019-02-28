@@ -49,6 +49,7 @@ const Index = () => {
         <div>
           <Label text="Your name">
             <TextInput
+              disabled={status === 'loading'}
               type="text"
               onChange={e => setName(e.target.value)}
               required
@@ -59,6 +60,7 @@ const Index = () => {
         <div>
           <Label text="Your email address">
             <TextInput
+              disabled={status === 'loading'}
               type="email"
               name="contact_email"
               onChange={e => setEmail(e.target.value)}
@@ -70,6 +72,7 @@ const Index = () => {
         <div>
           <Label text="Your message">
             <TextArea
+              disabled={status === 'loading'}
               name="contact_message"
               onChange={e => setMessage(e.target.value)}
               required
