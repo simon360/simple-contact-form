@@ -2,6 +2,7 @@
 
 import { css, jsx } from '@emotion/core';
 
+import TextArea from '../components/TextArea';
 import TextInput from '../components/TextInput';
 import useEmailState from '../hooks/useEmailState';
 
@@ -69,9 +70,10 @@ const Index = () => {
         <div>
           <label>
             Your message
-            <textarea
+            <TextArea
               name="contact_message"
               onChange={e => setMessage(e.target.value)}
+              required
               value={message}
             />
           </label>
