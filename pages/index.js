@@ -11,6 +11,7 @@ const wrapperStyle = css`
     box-sizing: border-box;
   }
 
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0 auto;
   max-width: ${800 / 16}rem;
   padding: 1rem;
