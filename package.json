@@ -4,6 +4,9 @@
   "description": "A simple contact form, built in React.",
   "main": "index.js",
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "test": "jest"
   },
   "repository": {
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/simon360/simple-contact-form/issues"
   },
-  "homepage": "https://github.com/simon360/simple-contact-form#readme"
+  "homepage": "https://github.com/simon360/simple-contact-form#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
 }
