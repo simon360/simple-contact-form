@@ -6,16 +6,28 @@ const Index = () => {
     email,
     message,
     name,
+    status,
+
     setEmail,
     setMessage,
     setName,
+    submitMessage,
   } = useEmailState();
 
   return (
     <React.Fragment>
       <h1>Contact SADL</h1>
       <p>Get in touch with Simon Andrews Development Limited</p>
-      <form action="/" method="post">
+      <form
+        action="/"
+        method="post"
+        onSubmit={e => {
+          submitMessage();
+
+          e.preventDefault();
+          return false;
+        }}
+      >
         <div>
           <label>
             Your name
@@ -49,7 +61,18 @@ const Index = () => {
           </label>
         </div>
         <div>
-          <input type="submit" name="contact_submit" value="Submit" />
+          <input
+            type="submit"
+            disabled={status === 'loading'}
+            name="contact_submit"
+            value={
+              {
+                loading: '⏱',
+                normal: 'Submit',
+                sent: 'Sent!',
+              }[status]
+            }
+          />
         </div>
       </form>
     </React.Fragment>
