@@ -21,7 +21,7 @@
   "homepage": "https://github.com/simon360/simple-contact-form#readme",
   "dependencies": {
     "@emotion/core": "^10.0.7",
-    "next": "^8.0.3",
+    "next": "^9.3.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
